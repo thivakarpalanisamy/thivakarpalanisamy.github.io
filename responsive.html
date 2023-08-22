@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <style>
+      /* Reset some default styles for consistency */
+body, ul, li, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-right: 20px;
+}
+
+.nav-menu li:last-child {
+    margin-right: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ff9900;
+}
+
+.content {
+    padding: 20px;
+}
+
+/* Style for small devices */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    /* Show close bar */
+    .close-bar {
+        display: block;
+        background-color: #333;
+        text-align: right;
+        padding: 10px;
+    }
+
+    /* Style close button */
+    #close-btn {
+        background-color: #ff9900;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+      }
+      
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Your Logo</div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h1>Welcome to Our Website</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    </div>
+
+    <!-- Close bar for small devices -->
+    <div class="close-bar">
+        <button id="close-btn">Close</button>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+    const navMenu = document.querySelector(".nav-menu");
+    const closeBtn = document.querySelector("#close-btn");
+
+    // Toggle navigation menu
+    closeBtn.addEventListener("click", function () {
+        if (navMenu.style.display === "block") {
+            navMenu.style.display = "none";
+        } else {
+            navMenu.style.display = "block";
+        }
+    });
+});
+      
+    </script>
+</body>
+</html>
